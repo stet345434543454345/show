@@ -1,0 +1,220 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<center>
+  <h3 class="btn btn-primary heading">case study between google lens and Mobilenet
+    <hr>
+    <center>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 heading_div">
+        google lens
+        <br>
+          <div class="btn heading_div2">
+          vs <br> 
+          </div>
+          <div class="btn heading_div2">
+            Mobilenet  
+            </div>
+        </div>
+    </center>
+    <br>
+  </h3>
+  <br><br>
+  <ol>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="foamborad.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>board</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>foam surfboard</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>google lens correct</h4>
+      </div>
+    </div>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="cable.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>punch ball</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>dress</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>both wrong</h4>
+      </div>
+    </div>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="bric.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>bonnet</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>charger</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>google lens wins</h4>
+      </div>
+    </div>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="batree.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>seatbelt</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>power bank</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>google lens correct</h4>
+      </div>
+    </div>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="nun.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>ski mask</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>nunchuck</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>google lens wins</h4>
+      </div>
+    </div>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="pencil.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>pencil</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>pencil</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>both correct</h4>
+      </div>
+    </div>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="phone.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>phone</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>phone</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>both correct</h4>
+      </div>
+    </div>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="rubic.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>mike</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>rubiks cube</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>google lens correct</h4>
+      </div>
+    </div>
+    <div class="test_image_and_result col-xs-12">
+      <li class="col-sm-4 col-xs-12">
+<b>test Image</b>
+<img src="shoo.jpg" class="img-responsive">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>mobilenet Model</b>
+        <span>RUNNING SHOE</span>
+      </h5>
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>google lens</b>
+        <span>mini shoe</span>
+      </h5>
+      <div class="mini_result" class="col-xs-12">
+        <h4>result:</h4>
+        <hr>
+        <h4>google lens correct</h4>
+      </div>
+      <h5>google lens wins</h5>
+    </div>
+  </ol>
+  
+
+</center>
+
+<div class="copy_right_footer">
+made by stetty
+</div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
+
+
